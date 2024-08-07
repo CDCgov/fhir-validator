@@ -11,7 +11,7 @@ Experimental [HL7 FHIR](https://www.hl7.org/fhir/) Validator using [FHIR Schema]
 
 #### Install Rust from [Rust-lang](https://www.rust-lang.org/tools/install)
 
-Example WSL:
+Using rustup, Example in WSL:
 
 ```
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -20,6 +20,18 @@ Restart Shell and Test Install
 
 ```
 $ cargo
+```
+On WSL the gcc toolchain is needed
+
+```
+$ sudo apt-get update
+$ sudo apt install build-essential
+```
+
+#### Run
+
+```
+$ cargo run
 ```
 
 ## Related documents
