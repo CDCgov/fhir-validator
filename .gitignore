@@ -1,4 +1,9 @@
 ###############
+# Mac development
+.DS_Store
+###############
+
+###############
 # Rust 
 # Reference: https://github.com/github/gitignore/blob/main/Rust.gitignore
 ###############
