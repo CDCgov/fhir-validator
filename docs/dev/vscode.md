@@ -63,7 +63,7 @@ File > Preference > Settings > Editor: Format on save (will run cargo fmt on sav
 
 settings.json
 ```
-"editor.formatOnSave": true
+"editor.formatOnSave": true,
 ```
 
 ### Disable Inlay Type Hints
