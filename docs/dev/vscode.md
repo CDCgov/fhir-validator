@@ -57,9 +57,9 @@
 
 ## Optional
 
-### Format on Save
+### Format on Save, runs cargo fmt
 
-File > Preference > Settings > Editor: Format on save (will run cargo fmt on save)
+File > Preference > Settings > Editor: Format on save 
 
 settings.json
 ```

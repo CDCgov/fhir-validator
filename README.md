@@ -9,7 +9,7 @@ Experimental [HL7 FHIR](https://www.hl7.org/fhir/) Validator using [FHIR Schema]
 
 ## Development
 
-#### Install Rust from [Rust-lang](https://www.rust-lang.org/tools/install), Example using rustup and WSL
+#### Install Rust from [Rust-lang](https://www.rust-lang.org/tools/install), example using rustup and WSL
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
