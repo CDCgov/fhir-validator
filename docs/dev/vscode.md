@@ -1,6 +1,6 @@
 # VS Code Setup
 
-## Plugins
+## Extensions
 
 - rust-analyzer (language support)
 - codeLLDB (debugger)
