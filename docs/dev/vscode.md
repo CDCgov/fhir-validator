@@ -67,10 +67,15 @@ settings.json
 ```
 
 ### Disable Inlay Type Hints
+
 settings.json
 ```
 "rust-analyzer.inlayHints.parameterHints.enable": false,
 "rust-analyzer.inlayHints.typeHints.enable": false,
 ```
+
+### View Macro
+
+Select Macro > Command Palette > rust-analyzer: Expand...
 
 
