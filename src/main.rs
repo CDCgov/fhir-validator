@@ -41,6 +41,7 @@ fn get_package_deps(package_folder: &str, package_coordinate: &str) -> Result<De
     Ok(package_deps)
 }// .get_package_deps
 
+
 fn get_package_meta(packages_folder: &str, package_coordinate: &str) -> Result<Value, Box<dyn Error>> {
     
     let file_path = format!("./{}/{}/package.ndjson", packages_folder, package_coordinate.replace('#', "_")); 
@@ -68,7 +69,8 @@ fn get_specific_line_from_ndjson(file_path: &str, target_line: usize) -> Result<
 
     Err("Target line not found".into()) 
 }// .get_specific_line_from_ndjson
- 
+
+
 fn normalize_package_deps(package_deps: Option<&Vec<Value>>) -> Dependencies {
     
     if let Some(deps) = package_deps {
@@ -81,11 +83,5 @@ fn normalize_package_deps(package_deps: Option<&Vec<Value>>) -> Dependencies {
     }// .else 
 
 }// .normalize_package_deps
-
-
-
-
-
-
 
 
