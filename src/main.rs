@@ -36,7 +36,7 @@ fn obtain_package_deps(package_folder: &str, package_coordinate: &str) -> Result
 fn get_package_deps(package_folder: &str, package_coordinate: &str) -> Result<Dependencies, Box<dyn Error>> {
     
     let package_meta = get_package_meta(package_folder, package_coordinate)?;
-    
+
     let package_deps = normalize_package_deps(package_meta["dependencies"].as_array());
 
     Ok(package_deps)
@@ -76,7 +76,7 @@ fn normalize_package_deps(package_deps: Option<&Vec<Value>>) -> Dependencies {
     
     if let Some(deps) = package_deps {
         deps.iter()
-            .filter_map(|d| d.as_str().map(|s| s[1..].to_string())) 
+            .filter_map(|d| d.as_str().map(|s| s[1..].to_string())) // removes leading (colon) character 
             .collect()
     
     } else {
