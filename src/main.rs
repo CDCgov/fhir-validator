@@ -8,13 +8,14 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     println!("Started FHIR Validator based on FHIR Schema...");
     
-    let package_folder = "./package";
-    let package_coordinate = "hl7.fhir.us.core#5.0.0";
+    let package_folder = "ig-packages";
+    let package_coordinate = "hl7.fhir.us.core#3.1.1";
+    //let package_coordinate = "hl7.fhir.us.health-care-surveys-reporting#1.0.0";
 
     println!("Set up validator for profile: {}", package_coordinate);
 
     let deps = obtain_package_deps(package_folder, package_coordinate)?;
-    println!("{:?}", deps);
+    println!("Result dependencies: {:?}", deps);
  
     Ok(())
     
@@ -44,7 +45,7 @@ fn get_package_deps(package_folder: &str, package_coordinate: &str) -> Result<De
 
 fn get_package_meta(packages_folder: &str, package_coordinate: &str) -> Result<Value, Box<dyn Error>> {
     
-    let file_path = format!("./{}/{}/package.ndjson", packages_folder, package_coordinate.replace('#', "_")); 
+    let file_path = format!("./{}/{}_package.ndjson", packages_folder, package_coordinate); 
 
     get_specific_line_from_ndjson(&file_path, 1) 
 }// .get_package_meta

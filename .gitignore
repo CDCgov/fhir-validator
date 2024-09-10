@@ -1,4 +1,9 @@
 ###############
+# Local IG fhir-schema packages used for dev
+ig-packages
+###############
+
+###############
 # VS Code
 .vscode
 ###############
