@@ -78,8 +78,6 @@ fn normalize_package_deps(package_deps: Option<&Vec<Value>>) -> Dependencies {
 
 fn dependency_resolver(package_folder: &str, mut visited_deps: Dependencies, mut enqueued_deps: Dependencies) 
     -> Result<Dependencies, Box<dyn Error>> {
-        //println!("visited_deps: {:?}", visited_deps);
-        //println!("enqueued_deps: {:?}", enqueued_deps);
 
         while !enqueued_deps.is_empty() {
             let mut new_deps = HashSet::new();
@@ -89,8 +87,6 @@ fn dependency_resolver(package_folder: &str, mut visited_deps: Dependencies, mut
 
                 visited_deps.insert(dep);
 
-                //println!("child_deps: {:?}", child_deps);
-
                 for child_dep in child_deps {
                     if !visited_deps.contains(&child_dep) {
                         new_deps.insert(child_dep);
@@ -98,11 +94,7 @@ fn dependency_resolver(package_folder: &str, mut visited_deps: Dependencies, mut
                 }// .for
             }// .for
 
-            //println!("visited_deps: {:?}", visited_deps);
-
             visited_deps.extend(new_deps.clone());
-
-            //println!("visited_deps(after clone): {:?}", visited_deps);
 
             enqueued_deps = new_deps;
         }// .while
